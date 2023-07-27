@@ -24,7 +24,9 @@
       tailwind.config = {
         theme: {
           extend: {
-            colors: {},
+            colors: {
+              "primary-color": "#F85559",
+            },
           },
         },
       };
@@ -32,15 +34,15 @@
     <!-- My style -->
     <style>
       .font-lato {
-        font-family: 'Lato', sans-serif;
+        font-family: "Lato", sans-serif;
       }
     </style>
   </head>
   <body class="font-lato">
-    <header class="mx-auto container flex justify-center">
+    <header class="mx-auto container flex justify-center flex-col">
       <!-- navbar start here -->
       <nav
-        class="w-full flex mx-auto justify-between lg:justify-between lg:flex-row bg-white lg:bg-[#F85559] lg:text-white text-black px-10 py-2 items-center rounded-full mt-12"
+        class="w-full flex mx-auto justify-between lg:justify-between lg:flex-row bg-white lg:bg-primary-color lg:text-white text-black lg:px-10 py-2 items-center rounded-full lg:mt-12 mt-4"
       >
         <!-- large devices menu -->
         <div class="hidden lg:flex">
@@ -53,7 +55,9 @@
         </div>
         <!-- logo -->
         <div class="">
-          <a class="btn btn-ghost normal-case text-xl"><img src="images/logo.png" alt="">Fruit Burst</a>
+          <a class="btn btn-ghost normal-case text-xl lg:text-4xl"
+            ><img src="images/logo.png" class="w-1/6" alt="" />Fruit Burst</a
+          >
         </div>
         <!-- small devices menu -->
         <div class="lg:hidden flex">
@@ -77,10 +81,10 @@
               tabindex="0"
               class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-32 -ml-24"
             >
-            <li><a>Home</a></li>
-            <li><a>About Us</a></li>
-            <li><a>Shop</a></li>
-            <li><a>All Fruits</a></li>
+              <li><a>Home</a></li>
+              <li><a>About Us</a></li>
+              <li><a>Shop</a></li>
+              <li><a>All Fruits</a></li>
             </ul>
           </div>
         </div>
@@ -110,6 +114,178 @@
         </div>
       </nav>
       <!-- navbar end here -->
+
+      <!-- banner section start here -->
+      <section class="lg:my-14">
+        <div class="carousel w-full rounded-xl mx-3 lg:mx-0">
+          <div id="slide1" class="carousel-item relative w-full">
+            <div
+              class="hero h-[300px] lg:h-[600px]"
+              style="background-image: url(images/banner1.png)"
+            >
+              <div class="hero-overlay bg-opacity-50"></div>
+              <div class="hero-content text-center text-neutral-content lg:-mt-14">
+                <div class="max-w-2xl">
+                  <h1 class="mb-5 text-2xl lg:text-7xl font-bold text-white">
+                    Exotic tastes at your <br />
+                    doorstep
+                  </h1>
+                  <p class="mb-5 text-2 lg:text-xl">
+                    We supply highly quality organic products
+                  </p>
+                  <button
+                    class="btn btn-error text-white capitalize bg-primary-color"
+                  >
+                    Shop Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide4" class="btn bt bg-transparent text-white btn-circle">❮</a>
+              <a href="#slide2" class="btn bg-transparent text-white btn-circle">❯</a>
+            </div>
+          </div>
+          <div id="slide2" class="carousel-item relative w-full">
+            <div
+              class="hero h-[300px] lg:h-[600px]"
+              style="background-image: url(images/banner2.png)"
+            >
+              <div class="hero-overlay bg-opacity-50"></div>
+              <div class="hero-content text-center text-neutral-content lg:-mt-14">
+                <div class="max-w-2xl">
+                  <h1 class="mb-5 text-2xl lg:text-7xl font-bold text-white">
+                    Exotic tastes at your <br />
+                    doorstep
+                  </h1>
+                  <p class="mb-5 text-2 lg:text-xl">
+                    We supply highly quality organic products
+                  </p>
+                  <button
+                    class="btn btn-error text-white capitalize bg-primary-color"
+                  >
+                    Shop Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide1" class="btn bg-transparent text-white  btn-circle">❮</a>
+              <a href="#slide3" class="btn bg-transparent text-white btn-circle">❯</a>
+            </div>
+          </div>
+          <div id="slide3" class="carousel-item relative w-full">
+            <div
+              class="hero h-[300px] lg:h-[600px]"
+              style="background-image: url(images/banner3.png)"
+            >
+              <div class="hero-overlay bg-opacity-50"></div>
+              <div class="hero-content text-center text-neutral-content lg:-mt-14">
+                <div class="max-w-2xl">
+                  <h1 class="mb-5 text-2xl lg:text-7xl font-bold text-white">
+                    Exotic tastes at your <br />
+                    doorstep
+                  </h1>
+                  <p class="mb-5 text-2 lg:text-xl">
+                    We supply highly quality organic products
+                  </p>
+                  <button
+                    class="btn btn-error text-white capitalize bg-primary-color"
+                  >
+                    Shop Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide2" class="btn bg-transparent text-white  btn-circle">❮</a>
+              <a href="#slide4" class="btn bg-transparent text-white btn-circle">❯</a>
+            </div>
+          </div>
+          <div id="slide4" class="carousel-item relative w-full">
+            <div
+              class="hero h-[300px] lg:h-[600px]"
+              style="background-image: url(images/banner4.png)"
+            >
+              <div class="hero-overlay bg-opacity-50"></div>
+              <div class="hero-content text-center text-neutral-content lg:-mt-14">
+                <div class="max-w-2xl">
+                  <h1 class="mb-5 text-2xl lg:text-7xl font-bold text-white">
+                    Exotic tastes at your <br />
+                    doorstep
+                  </h1>
+                  <p class="mb-5 text-2 lg:text-xl">
+                    We supply highly quality organic products
+                  </p>
+                  <button
+                    class="btn btn-error text-white capitalize bg-primary-color"
+                  >
+                    Shop Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide3" class="btn bg-transparent text-white  btn-circle">❮</a>
+              <a href="#slide1" class="btn bg-transparent text-white btn-circle">❯</a>
+            </div>
+          </div>
+        </div>
+        <!-- furits card -->
+        <div
+          class=" rounded hidden lg:grid grid-cols-5 text-center justify-center w-3/5 mx-auto drop-shadow-xl bg-white p-8 -mt-20"
+        >
+          <!-- single fruits 1 -->
+          <div>
+            <div class="flex justify-center">
+              <img
+                src="images/fruit1.png"
+                alt=""
+                class="w-3/5"
+                class="text-center"
+              />
+            </div>
+            <p>Strawberry</p>
+          </div>
+          <!-- single fruits 2 -->
+          <div>
+            <div class="flex justify-center">
+              <img src="images/fruit2.png" alt="" class="w-3/5" />
+            </div>
+            <p>Orange</p>
+          </div>
+          <!-- single fruits 3 -->
+          <div>
+            <div class="flex justify-center">
+              <img src="images/fruit3.png" alt="" class="w-3/5" />
+            </div>
+            <p>Mango</p>
+          </div>
+          <!-- single fruits 4 -->
+          <div>
+            <div class="flex justify-center">
+              <img src="images/fruit4.png" alt="" class="w-3/5" />
+            </div>
+            <p>Strawberry</p>
+          </div>
+          <!-- single fruits 5 -->
+          <div>
+            <div class="flex justify-center">
+              <img src="images/fruit5.png" alt="" class="w-3/5" />
+            </div>
+            <p>Mango</p>
+          </div>
+        </div>
+      </section>
+      <!-- banner section end here -->
     </header>
     <main></main>
     <footer></footer>
